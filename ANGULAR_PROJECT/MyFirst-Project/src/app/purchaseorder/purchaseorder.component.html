@@ -1,0 +1,32 @@
+<p>purchaseorder works!</p>
+<table *ngIf="order==null" class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Vendor</th>
+            <th>OrderNo</th>
+            <th>Item</th>
+            <th>Date</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ord of orders">
+            <td> {{ord.vendor}}</td>
+            <td> <a [routerLink]="['/order-details',ord.orderNo]" routerLinkActive="active">{{ord.orderNo}}</a>
+            </td>
+            <td>{{ord.orderItem}}</td>
+            <td>{{ord.orderDate | date:'dd-MM-yy'}}</td>
+            <td>{{ord.orderAmount | currency:'INR'}}</td>
+        </tr>
+    </tbody>
+</table>
+<div *ngIf="(order != null)">
+    orderNo: {{order.orderNo}}<br />
+    orderAmt: {{order.orderAmount}}<br />
+    orderProd: {{order.orderItem}}<br />
+    orderDate: {{order.orderDate}}<br />
+    orderAddress: {{order.address}}<br />
+    orderApprd: {{order.approvedby}}<br />
+    ordercont: {{order.contact}}<br />
+    ordervendor: {{order.vendor}}
+</div>

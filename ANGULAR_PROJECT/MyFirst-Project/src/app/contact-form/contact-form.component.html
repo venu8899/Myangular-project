@@ -1,0 +1,97 @@
+<!--p>contact-form works!</p-->
+<!--form #f="ngForm" (ngSubmit)="submit(f)"-->
+
+<form>
+  <div ngModelGroup="contact"></div>
+  <div class="form-group">
+    <label for="firstName">First Name</label>
+    <input
+      class="my-style"
+      required
+      ngModel
+      #f="ngModel"
+      minlength="4"
+      maxlength="10"
+      type="text"
+      name="firstName"
+      id="firstName"
+      (change)="myMethod(f)"
+    />
+
+    <div class="alert alert-danger" *ngIf="f.touched && !f.valid">
+      <div>First Name is required</div>
+    </div>
+    <div class="alert alert-danger" *ngIf="f.errors && f.errors.minlength">
+      First Name should be min {{ f.errors.minlength.requiredLength }}char
+    </div>
+  </div>
+  <br />
+
+  <div>
+    <label for="comment">Comment</label>
+    <textarea
+      class="form-control"
+      ngModel
+      required
+      name="comment"
+      id="comment"
+      cols="30"
+      rows="10"
+    ></textarea>
+  </div> <br/>
+  <div>select the gender</div>
+<div class="form-control">
+  <label for="male">Male</label>
+  <input
+    class="my-style"
+    required
+    ngModel
+    #m="ngModel"
+    type="radio"
+    name="gender"
+    id="male"
+    value="male"
+  /> 
+
+  <label for="male">Female</label>
+  <input
+    class="my-style"
+    required
+    ngModel
+    #fe="ngModel"
+    type="radio"
+    name="gender"
+    id="female"
+    value="female"
+  />
+</div>
+  
+  <div class="alert alert-danger" required *ngIf="m.touched && !m.valid"></div>
+  <div
+    class="alert alert-danger"
+    required
+    *ngIf="fe.touched && !fe.valid"
+  > </div> <br/> <br/>
+
+  <div class="checkbox" ngModel name="isSubscribe">Select checkbox
+    <label>
+      <input type="checkbox" required/>
+    </label>
+  </div>
+
+  <button class="btn btn-primary">Submit</button><br /><br />
+</form>
+
+<!--form #myformref="ngForm" (ngSubmit)="SaveData(myformref)"></form>
+
+<div class="row">
+    <label for="name">Name:</label>
+    <input type="text" autocomplete="off" name="Name" (ngModel)="name" /> {{name}}
+</div> <br />
+
+<div class="row">
+    <label for="name">Email:</label>
+    <input type="text" autocomplete="off" name="Email" ngModel />
+</div><br />
+
+<button type="submit">Submit</button-->

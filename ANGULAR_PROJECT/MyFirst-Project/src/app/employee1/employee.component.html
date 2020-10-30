@@ -1,0 +1,8 @@
+<p>employee works!</p>
+<div>
+    <ul>
+        <li *ngFor="let emp of employees">
+            <a [routerLink]="['/employee-details',emp.empId]"  routerLinkActive="active">{{emp.empName}}</a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,29 @@
+<!--p>electronics works!</p-->
+<!--button [style.color]="'red'">Click me</button><br>-->
+<div style="text-align:center">
+
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link active" routerLink="/AboutUs">AboutUs</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/">Home</a>
+        </li>
+    </ul>
+
+    <!--nav class="nav-tabs"><a href="/">Home</a><br />
+        <a href="/AboutUs">AboutUs</a></nav>-->
+    <router-outlet></router-outlet>
+</div>
+<p [style.color]="color1">Hellow howare you..?</p>
+<button class="mybutton-color">Click me</button><br>
+<button class="btn btn-primary">Click me</button><br>
+<ul>
+    <!--input type='text' [value]= 'message'/><br> //one-way binding-->
+    <!--input type='text' [(ngModel)]='message' /> <br>
+    {{message}} <br> <br> -->
+
+    <li *ngFor="let item1 of getElectricals()">
+        {{item1}}
+    </li>
+</ul>

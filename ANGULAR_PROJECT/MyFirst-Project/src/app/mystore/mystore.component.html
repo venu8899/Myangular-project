@@ -1,0 +1,13 @@
+<p>mystore works!</p>
+<tr>
+    <th>Electronics</th>
+    <th>Mensware</th>
+    <th>Grocery</th>
+    <th>Womensware</th>
+</tr>
+<body>
+    <tr *ngFor="let products of mystore">
+        <a [routerLink]="['/product-details',prod.orderNo]" routerLinkActive="active">{{products.electronics}}></a>
+
+    </tr>
+</body>

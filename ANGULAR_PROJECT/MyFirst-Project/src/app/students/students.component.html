@@ -1,0 +1,9 @@
+<p>students works!</p>
+
+<div>
+<ul>
+    <li *ngFor="let child of students">
+        <a [routerLink]="['/std-details',child.stdNo]"  routerLinkActive="active">{{child.stdName}}</a>
+    </li>
+</ul>
+</div>
