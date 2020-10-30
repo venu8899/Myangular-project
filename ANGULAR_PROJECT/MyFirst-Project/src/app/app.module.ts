@@ -23,6 +23,7 @@ import { PurchaseOrderComponent } from './purchaseorder/purchaseorder.component'
 import { MystoreComponent } from './mystore/mystore.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { MystatusComponent } from './mystatus/mystatus.component';
 //import { ExampleComponent } from './example/example.component';
 //import { PipeExample } from '@angular/core';
 
@@ -47,6 +48,7 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
     PurchaseOrderComponent,
     SidebarComponent,
     ContactFormComponent,
+    MystatusComponent,
     //MystoreComponent
     //PipeExample,
     //ExampleComponent
